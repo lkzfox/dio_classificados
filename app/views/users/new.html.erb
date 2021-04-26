@@ -1,0 +1,23 @@
+<% if @user.errors.any? %>
+    <p> Falha ao cadastrar </p>
+    <%= @user.errors.full_messages.join(', ') %>
+<% end %>
+
+<%= form_for @user, url: users_path do |f| %>
+    <div>
+        <%= f.label :name, "Nome" %>
+        <%= f.text_field :name %>
+    </div>
+    <div>
+        <%= f.label :email, "Email" %>
+        <%= f.email_field :email %>
+    </div>
+    <div>
+        <%= f.label :password, "Senha" %>
+        <%= f.password_field :password %>      
+    </div>
+
+    <div>
+        <%= f.submit "Registrar" %>
+    </div>
+<% end %>

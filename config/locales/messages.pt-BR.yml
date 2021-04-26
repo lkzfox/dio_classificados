@@ -1,0 +1,13 @@
+pt-BR:
+  sessions:
+    create:
+      welcome: "Bem Vindo %{name}"
+      invalid: "Email ou Senha Inválidos"
+    destroy:
+      session_finished: "Sessão Encerrada"
+  home:
+    show:
+      logout: "Sair"
+  notification_mailer:
+    welcome:
+      greeting: "Olá"

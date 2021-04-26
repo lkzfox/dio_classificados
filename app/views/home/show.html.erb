@@ -1,0 +1,20 @@
+<h1>Cadastro de Usuário</h1>
+
+<% if user_signed_in? then %>
+    Bem Vindo
+    <br>
+    <%= button_to t('.logout'), delete_sessions_path, method: :delete %>
+    <%= link_to "novo anúncio", new_ad_path %>
+<% else %>
+    <%= link_to 'Registrar', new_user_path %>
+    <%= link_to 'Entrar',  new_session_path %>
+<% end %>
+
+
+<% @ads.each do |ad| %>
+    <div class'minhaclasse'>
+        <%= ad.title %>
+        <%= ad.description %>
+        <%= ad.price %>
+    </div>
+<%  end %>
